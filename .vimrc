@@ -76,7 +76,7 @@ endif
 
 set tabstop=4       " number of visual spaces per TAB
 set softtabstop=4   " number of spaces in tab when editing
-set expandtab       " tabs are spaces
+" set expandtab       " tabs are spaces
 set shiftwidth=4
 set shiftround
 set autoindent
@@ -91,6 +91,9 @@ set whichwrap+=<,>,h,l
 " set tw=79
 set t_Co=256
 set nowrap
+
+" language specific
+au! BufNewFile,BufRead *.py set expandtab
 
 " Show Whitespace
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
