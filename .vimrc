@@ -32,7 +32,13 @@ if !empty(glob(vundle_path))
     Plugin 'plasticboy/vim-markdown'
     " syntax checking
     Plugin 'scrooloose/syntastic'
+	" autocomplete
     " Plugin 'Valloric/YouCompleteMe'
+	Plugin 'lifepillar/vim-mucomplete'
+	" C lang
+	Plugin 'WolfgangMehner/c-support'
+	" lisp support
+	Plugin 'kovisoft/slimv'
     " All of your Plugins must be added before the following line
     call vundle#end()            " required
 
@@ -93,6 +99,7 @@ set t_Co=256
 set nowrap
 
 " language specific
+" python
 au! BufNewFile,BufRead *.py set expandtab
 
 " Show Whitespace
@@ -143,6 +150,8 @@ let g:indentLine_conceallevel = 0
 " nerdtree settings
 " let g:NERDTreeDirArrowExpandable = '▸'
 " let g:NERDTreeDirArrowCollapsible = '▾'
+
+set completeopt+=menuone
 
 set background=dark
 let g:solarized_termcolors=256
